@@ -1,9 +1,15 @@
 a,body{color:#000}
-nav,nav>ul{display:flex}
 button#menu-icon,header,nav ul li ul{background-color:#fff}
-*,:after,:before{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
-body{margin:0 auto;font:16px/2.25 latolight,sans-serif}
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline;text-decoration:none}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav,nav>ul{display:flex}
+body{line-height:1;margin:0 auto;font:16px/2.25 latolight,sans-serif}
 .banner ul li a:after,nav>ul li a:after{font-family:FontAwesome;vertical-align:middle}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+*,:after,:before{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 .container{max-width:1170px;margin:0 auto}
 header{position:fixed;width:100%;z-index:2}
 header .container{display:flex;justify-content:space-between;padding:40px 0 37px}
@@ -13,7 +19,7 @@ nav>ul li a,nav>ul li a:after{display:inline-block}
 nav>ul li{margin:0 40px 0 0;position:relative}
 nav>ul li a:after{content:'\f078';font-size:8px;padding:0 0 0 5px}
 nav>ul li a:hover{color:#41bedd}
-nav ul li ul{display:none;position:absolute;width:150px}
+nav ul li ul{display:none;position:absolute;width:170px}
 nav ul li ul li{padding:0 0 0 10px}
 nav ul li ul li a:after{content:'';padding:0}
 nav li.over ul,nav li:hover ul{display:block;position:absolute;background-color:#fff}
