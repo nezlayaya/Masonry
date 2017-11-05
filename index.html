@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="dist/css/reset.css">
+    <link rel="stylesheet" href="dist/css/stylesheet.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/css/main.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="#" class="logo">
+            <img src="src/img/logo.png" alt="">
+        </a>
+        <button id="menu-icon"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="openMenu('sub_menu_1');return(false)">Home</a>
+                    <ul id="sub_menu_1">
+                        <li><a href="#">Подпункт №1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" onclick="openMenu('sub_menu_2');return(false)">Pages</a>
+                    <ul id="sub_menu_2">
+                        <li><a href="#">Подпункт №1</a></li>
+                        <li><a href="#">Подпункт №2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" onclick="openMenu('sub_menu_3');return(false)">Portfolio</a>
+                    <ul id="sub_menu_3">
+                        <li><a href="#">Подпункт №1</a></li>
+                        <li><a href="#">Подпункт №2</a></li>
+                        <li><a href="#">Подпункт №3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" onclick="openMenu('sub_menu_4');return(false)">Blog</a>
+                    <ul id="sub_menu_4">
+                        <li><a href="#">Подпункт №1</a></li>
+                        <li><a href="#">Подпункт №2</a></li>
+                        <li><a href="#">Подпункт №3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" onclick="openMenu('sub_menu_5');return(false)">Features</a>
+                    <ul id="sub_menu_5">
+                        <li><a href="#">Подпункт №1</a></li>
+                        <li><a href="#">Подпункт №2</a></li>
+                        <li><a href="#">Подпункт №3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" onclick="openMenu('sub_menu_6');return(false)">Features</a>
+                    <ul id="sub_menu_6">
+                        <li><a href="#">Подпункт №1</a></li>
+                        <li><a href="#">Подпункт №2</a></li>
+                        <li><a href="#">Подпункт №3</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form>
+                <input class="sb-search-input" placeholder="Enter your search term..." type="search" value=""
+                       name="search" id="search">
+                <span class="search sb-icon-search"><i class="fa fa-search" aria-hidden="true"></i></span>
+            </form>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="banner">
+        <h1>3 Column Sortable Masonry Portfolio</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Sortable Masonry</a></li>
+            <li><a href="#">3 Columns</a></li>
+        </ul>
+    </section>
+    <ul class="tab-menu">
+        <li>All</li>
+        <li>3D</li>
+        <li>Illustration</li>
+        <li>Photography</li>
+        <li>Web</li>
+    </ul>
+    <div class="container">
+        <div class="elements-gride"
+             data-masonry='{ "itemSelector": ".element-item", "columnWidth": 1, "percentPosition": true, "gutter": 35 }'>
+            <div class="element-item"><img src="src/img/img-1.jpg" alt=""></div>
+            <div class="element-item"><img src="src/img/img-2.jpg" alt=""></div>
+            <div class="element-item"><img src="src/img/img-3.png" alt=""></div>
+            <div class="element-item"><img src="src/img/img-6.jpg" alt=""></div>
+            <div class="element-item"><img src="src/img/img-7.jpg" alt=""></div>
+            <div class="element-item"><img src="src/img/img-4.png" alt=""></div>
+            <div class="element-item"><img src="src/img/img-5.jpg" alt=""></div>
+        </div>
+        <button class="more">Load more</button>
+    </div>
+</main>
+<footer>
+    <div class="container">
+        <div class="column">
+            <h2>Shortly About Us</h2>
+            <p>Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum
+                primis in faucibus orci luctus et ultrices posuere cubilia. Suspendisse sollicitudin velit sed leo.
+            </p>
+        </div>
+        <div class="column">
+            <h2>Contact Us</h2>
+            <div class="items">
+                <div class="item">
+                    <p><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+1234567890">(123)-456-7890 </a></p>
+                    <p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@companyname.com">info@companyname.com</a>
+                    </p>
+                    <p><i class="fa fa-skype" aria-hidden="true"></i><a href="#">skype.name </a></p>
+                </div>
+                <div class="item">
+                    <span><i class="fa fa-map-marker"
+                             aria-hidden="true"></i>8901 Marmora Road,  Glasgow, D04 89GR.</span>
+                    <button class="more-maps">Open in Google Maps</button>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <h2>Stay Connected</h2>
+            <div class="social">
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-google" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<a href="#" id="goTop"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+<div class="rights">© 2014 illusion. All Rights Reserved.</div>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/masonry-layout/dist/masonry.pkgd.min.js"></script>
+<script src="dist/js/all.js"></script>
+</body>
+</html>

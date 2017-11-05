@@ -1,0 +1,384 @@
+/*--------CUSTOM STYLE-----------*/
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  color: #000;
+  font: 16px/2.25 latolight, sans-serif;
+}
+
+a {
+  color: #000;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+/*--------------HEADER------------------*/
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background-color: #fff;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0 37px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li {
+      margin: 0 40px 0 0;
+      position: relative;
+      a {
+        display: inline-block;
+        &:after {
+          content: '\f078';
+          font-family: 'FontAwesome';
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 8px;
+          padding: 0 0 0 5px;
+        }
+        &:hover{
+          color: #41bedd;
+        }
+      }
+    }
+  }
+}
+
+/*SUBMENU*/
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  width: 150px;
+}
+
+nav ul li ul li {
+  padding: 0 0 0 10px;
+}
+
+nav ul li ul li a:after {
+  content: '';
+  padding: 0;
+}
+
+nav li:hover ul, nav li.over ul {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+}
+
+/*Burger menu*/
+
+button#menu-icon{
+  display: none;
+  background-color: #fff;
+  border: none;
+  width: 30px;
+  height: 30px;
+  i{
+    font-size: 25px;
+    color: #bdc3c7;
+  }
+}
+
+/*-----Tab-menu----------*/
+.tab-menu {
+  display: flex;
+  align-items: center;
+  max-width: 540px;
+  margin: 70px auto 30px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  li {
+    padding: 0 30px;
+    cursor: pointer;
+    &:hover {
+      background-color: #41bedd;
+      color: #fff;
+      transition: 0.5s;
+    }
+    &:last-child {
+      border-bottom-right-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+    &:first-child {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+  }
+  li:not(:last-child) {
+    border-right: 1px solid #bdc3c7;
+  }
+}
+
+/*--------------FORM SEARCH--------------*/
+
+nav span.search i {
+  color: #bdc3c7;
+  border: 1px solid #bdc3c7;
+  border-radius: 50px;
+  padding: 7px 8px;
+  cursor: pointer;
+}
+
+input#search {
+  display: none;
+}
+
+/*-----------BANNER----------*/
+.banner {
+  background-color: #f7f9f9;
+  background-image: linear-gradient(to left, #35eef6 0%, #7c28b1 100%);
+  padding: 208px 0 108px;
+  color: #fff;
+  text-align: center;
+  h1 {
+    font-size: 60px;
+  }
+}
+
+.banner ul {
+  display: inline-flex;
+  li {
+    margin: 0 10px 0 0;
+  }
+  li a {
+    color: #ecf0f1;
+  }
+}
+
+.banner ul li a:after {
+  content: '\f054';
+  font-family: 'FontAwesome';
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 8px;
+  padding: 0 0 0 5px;
+}
+
+/*Masonry*/
+.element-item {
+  width: 370px;
+}
+
+.more, .more-maps {
+  border: 1px solid #bdc3c7;
+  background-color: transparent;
+  padding: 12px 0;
+  width: 125px;
+  margin: 50px auto 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    background-color: #bdc3c7;
+    color: #fff;
+    transition: 0.5s;
+  }
+}
+
+.more-maps {
+  width: 191px;
+  margin: 17px 0 0 0;
+  display: inline;
+}
+
+/*-------Footer---------*/
+footer {
+  margin: 70px 0 0 0;
+  padding: 52px 0 48px 0;
+  background-color: #ecf0f1;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer .column {
+  h2 {
+    font-size: 20px;
+  }
+  h2,
+  p {
+    color: #606366;
+  }
+  &:first-child {
+    flex: 1 1 200px;
+    padding: 0 20px;
+  }
+  &:nth-child(2) {
+    flex: 2;
+  }
+  &:nth-child(3) {
+    flex: 1;
+  }
+  .items {
+    display: flex;
+    justify-content: space-between;
+    .item p {
+      display: flex;
+    }
+    .item span,
+    .item p a {
+      color: #606366;
+    }
+    .item + .item {
+      text-align: right;
+      padding: 0 25px;
+    }
+  }
+}
+
+.column i {
+  color: #a255c4;
+  border: 1px solid #a255c4;
+  border-radius: 50px;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 14px 0 0;
+}
+
+.column .social {
+  i {
+    color: #d1d5d8;
+    border: 1px solid #d1d5d8;
+  &:hover{
+    color: #000;
+    border: 1px solid #000;
+  }
+  }
+}
+
+.element-item{
+  margin-bottom: 15px;
+}
+
+/*-------Rights--------*/
+.rights{
+  text-align: center;
+  background-color: rgba(189, 195, 199, 0.46);
+  color: #899096;
+}
+/*-------GoTop--------*/
+#goTop{
+  color: #d1d5d8;
+  border: 1px solid #d1d5d8;
+  padding: 10px 20px;
+  display: none;
+  position: fixed;
+  top: 70%;
+  right: 1%;
+  border-radius: 50px;
+  &:hover{
+    color: #fff;
+    background-color: rgba(96, 99, 102, 0.81);
+    transition: 0.5s;
+    border: 1px solid transparent;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  header .container{
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+
+@media screen and (max-width: 996px){
+  footer .container{
+    display: block;
+  .column{
+    padding: 0 20px;
+    h2{
+      text-align: center;
+    }
+    .items{
+      display: block;
+      .item p{
+        justify-content: center;
+      }
+      .item span{
+        display: block;
+        text-align: center;
+      }
+      .item .more-maps{
+        margin: 17px auto 0;
+        display: flex;
+      }
+    }
+    .social{
+      text-align: center;
+    }
+  }
+  }
+}
+
+@media screen and (max-width: 900px){
+  button#menu-icon{
+    display: block;
+    float: right;
+  }
+  header .container{
+    display: block;
+    padding: 20px;
+  }
+  nav{
+    display: none;
+    ul{
+      display: block;
+      text-align: center;
+      li{
+        margin: 0;
+        ul{
+          right: 50px;
+          top: 0;
+        }
+      }
+    }
+  }
+  .banner h1{
+    font-size: 30px;
+  }
+  .tab-menu{
+    max-width: 435px;
+    li{
+      padding: 0 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 760px){
+  .elements-gride .element-item{
+    position: static!important;
+    margin: 15px auto;
+  }
+  .more{
+    margin: 0 auto;
+  }
+}
